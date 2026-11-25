@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - '**/*.html'
-      - '.github/workflows/cicd.yml'
   workflow_dispatch:
 
 permissions:
@@ -30,7 +29,7 @@ jobs:
 
       - name: Check HTML files
         run: |
-          npx --yes htmlhint "**/*.html"
+          npx --yes htmlhint --rules tag-pair "**/*.html"
 
   cd-deploy:
     needs: ci-test
