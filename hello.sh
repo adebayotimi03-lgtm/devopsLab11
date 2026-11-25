@@ -6,3 +6,5 @@ then
 else
     echo "need name as param"
 fi
+
+echo "Bash script updated"
